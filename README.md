@@ -18,8 +18,8 @@ val sweetPreferences = SweetPreferences.Builder().withDefaultSharedPreferences(c
 val preferences = UserPreferences(sweetPreferences)
 
 // Use the preferences in a type-safe manner
-preference.username = "John Doe"
-preference.counter = 34
+preferences.username = "John Doe"
+preferences.counter = 34
 ```
 
 ### Custom SharedPreference
@@ -29,6 +29,18 @@ If you have a custom `SharedPreference` instance, you can pass it to the `SweetP
 ```kotlin
 val customPreference = ... // Obtain custom SharedPreferences
 val sweetPreferences = SweetPreferences.Builder().with(customPreference).build()
+```
+
+### Advanced methods
+
+Other than accessing your preferences as Kotlin properties, you can also do the same as with a regular `SharedPreferences` or `SharedPreferences.Editor` object.
+
+```kotlin
+sweetPreferences.set("key", 1337)
+sweetPreferences.remove("key")
+sweetPreferences.contains("key")
+sweetPreferences.get("key", 0)
+sweetPreferences.clear() // Clear all preferences
 ```
 
 ### Demo app

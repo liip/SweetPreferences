@@ -7,8 +7,13 @@ Add syntactic sugar to your Android Preferences
 ```kotlin
 // Define a class that will hold the preferences
 class UserPreferences(sweetPreferences: SweetPreferences) {
-    var counter: Int by sweetPreferences.delegate(0) // Default key is "counter"
-    var username: String? by sweetPreferences.delegate(null, "usernameKey") // Key is hardcoded
+    // Default key is "counter"
+    // Default value is "0"
+    var counter: Int by sweetPreferences.delegate(0)
+    
+    // Key is hardcoded to "usernameKey"
+    // Default value is null
+    var username: String? by sweetPreferences.delegate(null, "usernameKey") 
 }
 
 // Obtain a SweetPreferences instance with default SharedPreferences

@@ -5,7 +5,28 @@
 [![Jitpack](https://jitpack.io/v/liip/SweetPreferences.svg)](https://jitpack.io/#liip/SweetPreferences)
 
 
-Add syntactic sugar to your Android Preferences
+Add syntactic sugar to your Android Preferences.
+
+## Installation
+
+In your root *build.gradle* at the end of repositories:
+
+```gradle
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+In your app *build.gradle*, add the dependency:
+
+```gradle
+dependencies {
+    implementation 'com.github.liip:SweetPreferences:1.0.0'
+}
+```
 
 ## Usage
 
@@ -56,24 +77,3 @@ sweetPreferences.clear() // Clear all preferences
 ### Demo app
 
 You can check the demo Android application to see it in action.
-
-## Setup
-
-In your root *build.gradle* at the end of repositories:
-
-```gradle
-allprojects {
-    repositories {
-        ...
-        maven { url 'https://jitpack.io' }
-    }
-}
-```
-
-In your app *build.gradle*, add the dependency:
-
-```gradle
-dependencies {
-    implementation 'com.github.liip:SweetPreferences:1.0.0'
-}
-```

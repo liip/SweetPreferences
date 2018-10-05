@@ -35,6 +35,10 @@ android {
         classifier = 'javadoc'
         from "$buildDir/javadoc"
     }
+
+    artifacts {
+        archives dokkaJar
+    }
 }
 
 dependencies {

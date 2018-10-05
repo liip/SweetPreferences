@@ -1,4 +1,9 @@
-# SweetPreferences [![Build Status](https://www.travis-ci.org/liip/SweetPreferences.svg?branch=master)](https://www.travis-ci.org/liip/SweetPreferences)
+# SweetPreferences
+
+[![Build Status](https://www.travis-ci.org/liip/SweetPreferences.svg?branch=master)](https://www.travis-ci.org/liip/SweetPreferences)
+[![GitHub license](https://img.shields.io/github/license/liip/SweetPreferences.svg)](https://github.com/liip/SweetPreferences/blob/master/LICENSE)
+[![Jitpack](https://jitpack.io/v/liip/SweetPreferences.svg)](https://jitpack.io/#liip/SweetPreferences)
+
 
 Add syntactic sugar to your Android Preferences
 

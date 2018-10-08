@@ -9,9 +9,9 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-class SweetPreferencesImplTest {
+class SweetPreferencesTest {
 
-    private lateinit var prefs: SweetPreferencesImpl
+    private lateinit var prefs: SweetPreferences
     private lateinit var testClass: PreferenceTestClass
 
     @Before
@@ -21,7 +21,7 @@ class SweetPreferencesImplTest {
         val systemPrefs = context.getSharedPreferences("test", Context.MODE_PRIVATE)
         systemPrefs.edit().clear().commit()
 
-        prefs = SweetPreferencesImpl(systemPrefs)
+        prefs = SweetPreferences(systemPrefs)
         testClass = PreferenceTestClass(prefs)
     }
 
@@ -123,11 +123,11 @@ class SweetPreferencesImplTest {
     }
 }
 
-private class PreferenceTestClass(preferencesImpl: SweetPreferencesImpl) {
-    var boolean: Boolean by preferencesImpl.delegate(false)
-    var string: String by preferencesImpl.delegate("cool")
-    var optString: String? by preferencesImpl.delegate(null)
-    var int: Int by preferencesImpl.delegate(1)
-    var float: Float by preferencesImpl.delegate(1f)
-    var long: Long by preferencesImpl.delegate(1)
+private class PreferenceTestClass(preferences: SweetPreferences) {
+    var boolean: Boolean by preferences.delegate(false)
+    var string: String by preferences.delegate("cool")
+    var optString: String? by preferences.delegate(null)
+    var int: Int by preferences.delegate(1)
+    var float: Float by preferences.delegate(1f)
+    var long: Long by preferences.delegate(1)
 }

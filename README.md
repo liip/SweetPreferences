@@ -4,7 +4,6 @@
 [![GitHub license](https://img.shields.io/github/license/liip/SweetPreferences.svg)](https://github.com/liip/SweetPreferences/blob/master/LICENSE)
 [![Jitpack](https://jitpack.io/v/liip/SweetPreferences.svg)](https://jitpack.io/#liip/SweetPreferences)
 
-
 Add syntactic sugar to your Android Preferences.
 
 ## Installation
@@ -77,3 +76,7 @@ sweetPreferences.clear() // Clear all preferences
 ### Demo app
 
 You can check the demo Android application to see it in action.
+
+## Blogpost
+
+Read the accompanying blogpost on [liip.ch](https://www.liip.ch/en/blog/syntactic-sugar-android-preferences-kotlin).

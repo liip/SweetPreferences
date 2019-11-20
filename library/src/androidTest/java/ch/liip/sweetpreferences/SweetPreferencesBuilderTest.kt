@@ -2,15 +2,12 @@ package ch.liip.sweetpreferences
 
 import android.content.Context
 import android.preference.PreferenceManager
-import android.support.test.InstrumentationRegistry
-import android.support.test.runner.AndroidJUnit4
+import androidx.test.platform.app.InstrumentationRegistry
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
-import org.junit.runner.RunWith
 
 
-@RunWith(AndroidJUnit4::class)
 class SweetPreferencesBuilderTest {
 
     @Test(expected = IllegalStateException::class)
@@ -24,7 +21,7 @@ class SweetPreferencesBuilderTest {
     @Test
     fun takesTheGivenPreference() {
 
-        val context = InstrumentationRegistry.getTargetContext()
+        val context = InstrumentationRegistry.getInstrumentation().context
         val systemPrefs = context.getSharedPreferences("test", Context.MODE_PRIVATE)
         systemPrefs.edit().clear().commit()
 
@@ -39,7 +36,7 @@ class SweetPreferencesBuilderTest {
     @Test
     fun takesTheDefaultPreference() {
 
-        val context = InstrumentationRegistry.getTargetContext()
+        val context = InstrumentationRegistry.getInstrumentation().context
         val defaultPrefs = PreferenceManager.getDefaultSharedPreferences(context)
         defaultPrefs.edit().clear().commit()
         val testPrefs = context.getSharedPreferences("test", Context.MODE_PRIVATE)

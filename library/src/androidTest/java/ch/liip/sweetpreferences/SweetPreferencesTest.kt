@@ -1,14 +1,11 @@
 package ch.liip.sweetpreferences
 
 import android.content.Context
-import android.support.test.InstrumentationRegistry
-import android.support.test.runner.AndroidJUnit4
+import androidx.test.platform.app.InstrumentationRegistry
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
-import org.junit.runner.RunWith
 
-@RunWith(AndroidJUnit4::class)
 class SweetPreferencesTest {
 
     private lateinit var prefs: SweetPreferences
@@ -17,7 +14,7 @@ class SweetPreferencesTest {
     @Before
     fun setup() {
 
-        val context = InstrumentationRegistry.getTargetContext()
+        val context = InstrumentationRegistry.getInstrumentation().context
         val systemPrefs = context.getSharedPreferences("test", Context.MODE_PRIVATE)
         systemPrefs.edit().clear().commit()
 

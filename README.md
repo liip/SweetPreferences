@@ -23,7 +23,7 @@ In your app *build.gradle*, add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.liip:SweetPreferences:1.0.2'
+    implementation 'com.github.liip:SweetPreferences:1.0.3'
 }
 ```
 
